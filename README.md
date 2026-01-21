@@ -2,7 +2,6 @@
 A comprehensive SDET portfolio focused on quality engineering at scale. Demonstrates Playwright (Python) automation frameworks, API testing, CI/CD pipelines, containerized execution with Docker, Kubernetes-based test orchestration, and real-world test strategy and architecture decisions.
 
 👋 Overview
-
 This repository is a Mid–Senior SDET portfolio focused on quality engineering at scale.
 It demonstrates how I design, build, and operate production-ready test automation systems using Playwright with Python, modern CI/CD practices, and cloud-native execution.
 
@@ -12,6 +11,7 @@ Rather than showcasing isolated test scripts, this portfolio emphasizes:
 -  Reliability, scalability, and maintainability
 -  Integration with real-world delivery pipelines
 The goal is to show how quality is engineered, not just tested.
+<br>
 
 🎯 What This Portfolio Demonstrates
 This portfolio covers the full SDET responsibility spectrum:
@@ -22,6 +22,7 @@ This portfolio covers the full SDET responsibility spectrum:
 - Kubernetes-Based Test Orchestration for scalable and parallel execution
 - Quality Engineering Documentation including test strategy, risk-based testing, and automation ROI
 Each project is designed to reflect patterns used in real engineering teams.
+<br>
 
 🧠 SDET Philosophy
 I view the SDET role as an engineering function that enables teams to ship with confidence.
@@ -31,6 +32,7 @@ Quality is not defined by the number of tests written, but by:
 - The reduction of production risk
 Automation exists to protect critical user and business flows, integrate seamlessly into CI/CD, and scale as systems grow.
 Flaky or low-signal tests are treated as system problems, not acceptable trade-offs.
+<br>
 
 🧰 Technology Stack
 - Language: Python
@@ -40,10 +42,12 @@ Flaky or low-signal tests are treated as system problems, not acceptable trade-o
 - Containerization: Docker
 - Test Orchestration: Kubernetes
 Tooling choices are driven by stability, observability, and scalability, not popularity.
+<br>
 
 📁 Repository Structure
 This repository acts as a portfolio landing page and index for multiple focused projects:
 
+```Repository Structure
 sdet-playwright-portfolio/
 ├── playwright-python-ui-framework/
 ├── playwright-python-api-framework/
@@ -52,8 +56,10 @@ sdet-playwright-portfolio/
 ├── kubernetes-test-jobs/
 ├── quality-engineering-docs/
 └── README.md
+```
 
 Each sub-project contains detailed documentation explaining design decisions, trade-offs, and execution strategies.
+
 
 🚀 How to Use This Portfolio
 - Hiring managers: Review the README files inside each project to understand architecture and reasoning
