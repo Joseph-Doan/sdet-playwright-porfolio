@@ -8,3 +8,4 @@ pygments
 PyYAML
 jsonschema>=4.23,<5
 pytest-xdist==3.8.0
+httpx2
