@@ -173,7 +173,21 @@ playwright-enterprise-test-framework/
 
 ## Quick Start
 
-Clone the repository:
+
+# Quick Start
+
+## Prerequisites
+
+Install:
+
+- Python 3.12+
+- Git
+- Docker (optional)
+- Google Chrome or Chromium
+
+---
+
+## Clone the Repository
 
 ```bash
 git clone https://github.com/FormCircles/playwright-enterprise-test-framework.git
@@ -181,49 +195,107 @@ git clone https://github.com/FormCircles/playwright-enterprise-test-framework.gi
 cd playwright-enterprise-test-framework
 ```
 
-Initialize the FastAPI Mock App submodule:
+---
+
+## Initialize the FastAPI Mock Application
 
 ```bash
 git submodule update --init --recursive
 ```
 
-Create a Python virtual environment:
+---
 
-```bash
-python -m venv .venv
-```
+## Create a Virtual Environment
 
 Linux/macOS:
 
 ```bash
+python -m venv .venv
+
 source .venv/bin/activate
 ```
 
 Windows PowerShell:
 
 ```powershell
+python -m venv .venv
+
 .venv\Scripts\Activate.ps1
 ```
 
-Install dependencies:
+---
+
+## Install Dependencies
 
 ```bash
-pip install -r requirements.txt
+python -m pip install --upgrade pip
+
+python -m pip install -r requirements.txt
 ```
 
-Install Playwright browsers:
+Install the Playwright browser:
 
 ```bash
-playwright install
+python -m playwright install chromium
 ```
 
-Verify the installation:
+---
+
+## Start the FastAPI Mock Application
+
+Open a new terminal:
 
 ```bash
-pytest --collect-only
+cd sut/FastAPIMockApp
+
+uvicorn app.main:app \
+    --host 127.0.0.1 \
+    --port 8080
 ```
 
-If test collection completes successfully, start the FastAPI Mock Application and execute a smoke test to verify the complete environment.
+The application should now be available at:
+
+```
+http://127.0.0.1:8080
+```
+
+---
+
+## Configure Test Credentials
+
+Return to the project root:
+
+```bash
+export TEST_USERNAME=<test-username>
+export TEST_PASSWORD=<test-password>
+```
+
+Use the credentials configured for your local FastAPI Mock Application.
+
+---
+
+## Run a Smoke Test
+
+```bash
+python -m pytest \
+    -m smoke \
+    --env=dev \
+    --base-url=http://127.0.0.1:8080 \
+    -v
+```
+
+---
+
+## Expected Result
+
+You should see:
+
+- Playwright launches Chromium
+- Login succeeds
+- Smoke tests pass
+- HTML and JUnit reports are generated
+
+Congratulations! The Playwright Enterprise Test Framework is now running successfully.
 
 
 ## Installation
